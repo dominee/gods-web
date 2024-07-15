@@ -761,6 +761,7 @@
 }
 .tf-ion-help-buoy:before {
   content: "\f27c";
+  margin-left: 4px;
 }
 .tf-ion-help-circled:before {
   content: "\f142";
@@ -1671,6 +1672,7 @@
 }
 .tf-ion-map:before {
   content: "\f203";
+  margin-left: 4px;
 }
 .tf-ion-medkit:before {
   content: "\f2a2";
