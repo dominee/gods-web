@@ -410,6 +410,23 @@ Start Counter Section
 <!-- Custom js -->
 <script src="js/script.js"></script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    fetch('clan_data/clan_stats.json')
+      .then(response => response.json())
+      .then(data => {
+        for (const [key, value] of Object.entries(data)) {
+          const element = document.getElementById(key);
+          if (element) {
+            element.setAttribute('data-count', value);
+            element.textContent = value; // Update the displayed count
+          }
+        }
+      })
+      .catch(error => console.error('Error loading clan stats:', error));
+  });
+</script>
+
 </body>
 
 </html>
